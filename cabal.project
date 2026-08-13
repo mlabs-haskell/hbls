@@ -1,0 +1,8 @@
+packages: ./hbls.cabal
+
+documentation: true
+
+test-show-details: direct
+
+package hbls
+  ghc-options: -Werror

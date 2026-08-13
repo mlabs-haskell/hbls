@@ -1,0 +1,41 @@
+cabal-version: 3.0
+name: hbls
+version: 1.0.0
+synopsis: BLS12-381 bindings for Haskell.
+description: Someday something will go here.
+homepage: https://github.com/mlabs-haskell/hbls
+license: Apache-2.0
+license-file: LICENSE
+author: Koz Ross
+maintainer: koz@mlabs.city
+bug-reports: https://github.com/mlabs-haskell/hbls/issues
+copyright: (C) MLabs 2026
+category: BLS
+tested-with: ghc ==9.12.4
+build-type: Simple
+extra-source-files:
+  CHANGELOG.md
+  README.md
+
+-- Common sections
+common lang
+  build-depends: base ^>=4.21
+  ghc-options:
+    -Wall
+    -Wcompat
+    -Wincomplete-record-updates
+    -Wincomplete-uni-patterns
+    -Wredundant-constraints
+    -Wmissing-export-lists
+    -Wmissing-deriving-strategies
+    -Wredundant-bang-patterns
+
+  default-language: Haskell2010
+
+library
+  import: lang
+  exposed-modules: HBLS
+  build-depends: primitive
+  hs-source-dirs: src
+  cc-options: -O2
+  include-dirs: cbits
