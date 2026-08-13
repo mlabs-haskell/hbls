@@ -34,8 +34,14 @@ common lang
 
 library
   import: lang
-  exposed-modules: HBLS
-  build-depends: primitive
+  exposed-modules:
+    HBLS
+    HBLS.FFI
+
+  build-depends:
+    groups,
+    primitive,
+
   hs-source-dirs: src
   cc-options: -O2
   include-dirs: cbits
