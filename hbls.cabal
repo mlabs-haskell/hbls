@@ -44,4 +44,8 @@ library
 
   hs-source-dirs: src
   cc-options: -O2
+  c-sources:
+    asm/assembly.S
+    cbits/server.c
+
   include-dirs: cbits
