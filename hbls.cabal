@@ -16,6 +16,8 @@ build-type: Simple
 extra-source-files:
   CHANGELOG.md
   README.md
+  asm/*
+  cbits/*
 
 -- Common sections
 common lang
