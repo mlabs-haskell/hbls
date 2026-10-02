@@ -53,7 +53,7 @@ instance Eq G1Point where
       withByteArrayContents p2 $ \p2Ptr -> do
         let p1Ptr' = ConstPtr . castPtr $ p1Ptr
         let p2Ptr' = ConstPtr . castPtr $ p2Ptr
-        (== 0) <$> cG1Equal p1Ptr' p2Ptr'
+        (/= 0) <$> cG1Equal p1Ptr' p2Ptr'
 
 -- | = Important note
 --
@@ -147,7 +147,7 @@ instance Eq G2Point where
       withByteArrayContents p2 $ \p2Ptr -> do
         let p1Ptr' = ConstPtr . castPtr $ p1Ptr
         let p2Ptr' = ConstPtr . castPtr $ p2Ptr
-        (== 0) <$> cG2Equal p1Ptr' p2Ptr'
+        (/= 0) <$> cG2Equal p1Ptr' p2Ptr'
 
 -- Helpers
 
